@@ -1085,7 +1085,7 @@
         <h2>Stay tuned. Don't miss the drop.</h2>
         <p>Leave your contact and we'll ping you the moment the lineup, schedule, and ticket link unlock.</p>
         <form class="notify-form" id="notify-form">
-          <input type="email" placeholder="you@ufe.edu.mn" aria-label="Email address" required>
+          <input type="email" id="notify-email" placeholder="you@ufe.edu.mn" aria-label="Email address" required>
           <button type="submit" class="btn-primary">Notify Me</button>
         </form>
         <div class="notify-msg" id="notify-msg">You're on the list. See you October 10.</div>
@@ -1186,10 +1186,15 @@
   }
 
   // ---------- notify form ----------
+  const NOTIFY_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwfgHVViz818Ok-jnAybxCvuSBWi9JNv9E7D2V7bCuzaLGYOfeIY9SZkM3vQ6HUT-f3/exec';
   const form = document.getElementById('notify-form');
+  const emailInput = document.getElementById('notify-email');
   const msg = document.getElementById('notify-msg');
   form.addEventListener('submit', (e) => {
     e.preventDefault();
+    const body = new URLSearchParams({ email: emailInput.value });
+    fetch(NOTIFY_ENDPOINT, { method: 'POST', mode: 'no-cors', body })
+      .catch(() => {});
     msg.classList.add('show');
     form.reset();
   });
