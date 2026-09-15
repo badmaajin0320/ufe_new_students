@@ -1,0 +1,15 @@
+pages:
+  stage: deploy
+  image: alpine:latest
+  script:
+    - mkdir -p public
+    - cp index.html public/
+    - if [ -d assets ]; then cp -r assets public/; fi
+    - if [ -d images ]; then cp -r images public/; fi
+    - if [ -d css ]; then cp -r css public/; fi
+    - if [ -d js ]; then cp -r js public/; fi
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
