@@ -601,6 +601,8 @@
     grid-template-columns:repeat(3,1fr);
     gap:20px;
   }
+  .lineup-grid--artists{grid-template-columns:repeat(4,1fr);}
+  .lineup-grid--djs{grid-template-columns:repeat(2,1fr); max-width:560px; margin:0 auto;}
   .l-card{
     position:relative;
     aspect-ratio:4/5;
@@ -888,6 +890,8 @@
     .mobile-menu{display:flex;}
     .highlight-grid{grid-template-columns:repeat(2,1fr);}
     .lineup-grid{grid-template-columns:repeat(3,1fr);}
+    .lineup-grid--artists{grid-template-columns:repeat(2,1fr);}
+    .lineup-grid--djs{grid-template-columns:repeat(2,1fr);}
     .location-card{grid-template-columns:1fr;}
     .location-visual{min-height:180px;}
   }
@@ -896,6 +900,8 @@
     .highlight-grid{grid-template-columns:1fr 1fr; gap:12px;}
     .h-card{padding:22px 16px;}
     .lineup-grid{grid-template-columns:1fr; gap:14px;}
+    .lineup-grid--artists{grid-template-columns:1fr;}
+    .lineup-grid--djs{grid-template-columns:1fr;}
     .l-card{aspect-ratio:16/9;}
     .cd-cell{width:70px; padding:12px 0 10px;}
     .cd-num{font-size:1.5rem;}
@@ -925,7 +931,8 @@
     </a>
     <nav class="links" aria-label="Primary">
       <a href="#highlights">Highlights</a>
-      <a href="#lineup">Lineup</a>
+      <a href="#artists">Artists</a>
+      <a href="#djs">DJs</a>
       <a href="#Agenda">Agenda</a>
       <a href="#venue">Venue</a>
     </nav>
@@ -940,7 +947,8 @@
 
 <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile">
   <a href="#highlights">Highlights</a>
-  <a href="#lineup">Lineup</a>
+  <a href="#artists">Artists</a>
+  <a href="#djs">DJs</a>
   <a href="#Agenda">Agenda</a>
   <a href="#venue">Venue</a>
   <a href="#notify">Get Notified</a>
@@ -983,7 +991,7 @@
 
       <div class="hero-ctas">
         <a href="#notify" class="btn-primary">Get Notified</a>
-        <a href="#lineup" class="btn-ghost">See What's Coming</a>
+        <a href="#artists" class="btn-ghost">See What's Coming</a>
       </div>
     </div>
 
@@ -1035,16 +1043,54 @@
     </div>
   </section>
 
-  <!-- LINEUP -->
-  <section id="lineup">
+  <!-- ARTISTS -->
+  <section id="artists">
     <div class="wrap">
       <div class="sec-head reveal">
         <div class="sec-kicker">LINEUP &amp; ARTISTS</div>
-        <h2>First Names Dropped</h2>
-        <p>Two slots unlocked. One special guest still locked — watch this space.</p>
+        <h2>Meet The Lineup</h2>
+        <p>Four acts confirmed and ready to open the floor.</p>
       </div>
 
-      <div class="lineup-grid">
+      <div class="lineup-grid lineup-grid--artists">
+        <div class="l-card l-card--reveal reveal">
+          <img src="assets/becca.png" alt="Becca" class="l-photo">
+          <div class="l-name-tag">
+            <div class="l-tag">Becca</div>
+          </div>
+        </div>
+        <div class="l-card l-card--reveal reveal">
+          <img src="assets/ginjin.jpg" alt="Ginjin" class="l-photo">
+          <div class="l-name-tag">
+            <div class="l-tag">Ginjin</div>
+          </div>
+        </div>
+        <div class="l-card l-card--reveal reveal">
+          <img src="assets/bektor-petrovic.jpg" alt="Bektor Petrovic" class="l-photo">
+          <div class="l-name-tag">
+            <div class="l-tag">Bektor Petrovic</div>
+          </div>
+        </div>
+        <div class="l-card l-card--reveal reveal">
+          <img src="assets/fruity-bachka.jpg" alt="Fruity Bachka" class="l-photo">
+          <div class="l-name-tag">
+            <div class="l-tag">Fruity Bachka</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DJS -->
+  <section id="djs">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-kicker">DJ SETS</div>
+        <h2>Behind The Decks</h2>
+        <p>Back-to-back sets carrying the floor from first bell to last call.</p>
+      </div>
+
+      <div class="lineup-grid lineup-grid--djs">
         <div class="l-card l-card--reveal reveal">
           <img src="assets/dj-arto.jpg" alt="DJ Arto" class="l-photo">
           <div class="l-name-tag">
@@ -1059,17 +1105,7 @@
             <div class="l-label">SUPPORT ACT</div>
           </div>
         </div>
-        <div class="l-card reveal">
-          <div class="glow-ring" aria-hidden="true"></div>
-          <div class="lock-core">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
-          </div>
-          <div class="l-tag">SPECIAL GUEST</div>
-          <div class="l-label">ENCRYPTED · REVEAL SOON</div>
-        </div>
       </div>
-
-      <div class="lineup-banner reveal">SPECIAL GUEST STILL LOCKED — FOLLOW OUR INSTAGRAM ACCOUNT FOR THE UNLOCK.</div>
     </div>
   </section>
 
@@ -1174,7 +1210,8 @@
     </div>
     <div class="footer-links">
       <a href="#highlights">Highlights</a>
-      <a href="#lineup">Lineup</a>
+      <a href="#artists">Artists</a>
+      <a href="#djs">DJs</a>
       <a href="#Agenda">Agenda</a>
       <a href="#venue">Venue</a>
     </div>
